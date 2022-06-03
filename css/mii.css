@@ -41,11 +41,12 @@ html {
     font-size: 1.5em;
 }
 
-/* override */
+/* override 
 .navbar-default {
-    background-color: #253746;
+    background-color: #253746; 
     color:#fff;
 }
+*/
 
 
 
