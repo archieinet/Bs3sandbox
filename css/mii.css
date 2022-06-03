@@ -43,9 +43,11 @@ html {
 
 /* override 
 .navbar-default {
-    background-color: #253746;
+    background-color: #253746; 
     color:#fff;
-}*/
+}
+*/
+
 
 .navbar-toggle {
     float: left !important;
