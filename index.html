@@ -10,46 +10,108 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/mii.css">
+    <style>
+        /* header */
+        .nav-fixed-top{
+            top: 0;
+            border-width: 0 0 1px;
+        }
+        .header {
+            position: absolute;
+            height: 100px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            background: #F5F5F5;
+        }
+
+        .wex-logo {
+            position: absolute;
+            width: 196.79px;
+            height: 68px;
+            left: 48px;
+            top: 16px;
+        }
+    
+        .avatar {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            right: 48px;
+            top: calc(50% - 64px/2);
+        }
+
+        .ellipse-2{
+            box-sizing: border-box;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            left: 0px;
+            top: 0px;
+            background: #FFFFFF;
+            border: 5px solid #C8102E;
+            border-radius: 50%;
+        }
+    
+        .initial {
+            position: absolute;
+            width: 25px;
+            height: 25.47px;
+            left: calc(50% - 25px/2 - 0.5px);
+            top: calc(50% - 25.47px/2 - 0.27px);
+    
+            font-family: 'inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+    
+            color: #000000;
+        }
+    
+        .language-en a{
+            position: absolute;
+            width: 154px;
+            height: 23px;
+            right: 150px;
+            top: calc(50% - 23px/2 + 4.34px);
+    
+            font-family: 'inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: #020D24;
+        }
+        .language-es a{
+            position: absolute;
+            width: 154px;
+            height: 23px;
+            right: 60px;
+            top: calc(50% - 23px/2 + 4.34px);
+    
+            font-family: 'inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: #020D24;
+        }
+    </style>
 </head>
 <body>
-    <!-- navbar -->
-    <!-- <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <a href="#" class="navbar-brand">
-                <svg width="100" height="50" style="margin-top: -15px;" viewBox="0 0 1051 361" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M38.7 219.6V41.6H105V219.6C105 250.7 120.2 261.8 140.2 261.8C159.9 261.8 175.4 250.7 175.4 219.6V41.6H241.8V219.6C241.8 250.7 257.4 261.8 277 261.8C297.1 261.8 312.2 250.7 312.2 219.6V41.6H378.6V219.6C378.6 291.3 336.8 323.3 282.7 323.3C250.3 323.3 224.5 310.6 208.5 286.4C192.5 310.6 166.7 323.3 134.3 323.3C80.5 323.2 38.7 291.3 38.7 219.6Z" fill="#C8102E"/>
-                    <path d="M686.3 204.5C687.5 197.1 688.1 189.6 688 181.9C687.7 104.2 624.3 41.3 546.7 41.6C469 41.9 406.1 105.3 406.4 182.9C406.7 260.6 470.1 323.5 547.7 323.2C605 323 654.2 288.4 676 239.2L599.2 239.5C585.5 252 567.4 259.7 547.5 259.8C512.7 259.9 483.1 236.9 473.3 205.2L686.3 204.5ZM547 105.1C578.4 105 605.5 123.7 617.7 150.6L476.6 151C488.6 124.1 515.6 105.2 547 105.1Z" fill="#C8102E"/>
-                    <path d="M957.6 41.6H871.6L810.1 131.8L748.6 41.6H662.6L758.5 182.4L662.6 323.2H748.6L810.1 233L871.6 323.2H957.6L861.6 182.4L957.6 41.6ZM741 308.6H690.5L776.4 182.4L690.5 56.2H741L826.9 182.4L741 308.6Z" fill="#C8102E"/>
-                    <path d="M733.2 70.9H718.3L794.2 182.4L718.3 293.9H733.2L809.2 182.4L733.2 70.9Z" fill="#C8102E"/>
-                    <path d="M844.7 182.4V283.7L810.2 233L844.7 182.4Z" fill="#9C182F"/>
-                    <path d="M988.3 47.7H978.4V74.6H970.4V47.7H960.7V41.6H988.3V47.7Z" fill="#CE0E2D"/>
-                    <path d="M1002.1 41.6L1009.5 64.6L1016.8 41.6H1027.3V74.6H1019.3V66.9L1020.1 51.1L1012.1 74.6H1006.8L998.8 51.1L999.6 66.9V74.6H991.6V41.6H1002.1Z" fill="#CE0E2D"/>
-                </svg>                    
-            </a>
-
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse navHeaderCollapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
-                            <svg width="35" height="35" style="margin-top: -5px;" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="29.5" fill="white" stroke="#C8102E" stroke-width="5"/>
-                                <path d="M26.002 24.7812H28.9316V34.625C28.9316 35.5299 28.7298 36.3307 28.3262 37.0273C27.929 37.7174 27.3659 38.2513 26.6367 38.6289C25.9076 39.0065 25.084 39.1953 24.166 39.1953C22.6621 39.1953 21.4902 38.8145 20.6504 38.0527C19.8105 37.2845 19.3906 36.2005 19.3906 34.8008H22.3398C22.3398 35.4974 22.4863 36.0117 22.7793 36.3438C23.0723 36.6758 23.5345 36.8418 24.166 36.8418C24.7259 36.8418 25.1719 36.6497 25.5039 36.2656C25.8359 35.8815 26.002 35.3346 26.002 34.625V24.7812ZM38.8145 35.2695C38.8145 34.7161 38.6191 34.293 38.2285 34C37.8379 33.7005 37.1348 33.388 36.1191 33.0625C35.1035 32.7305 34.2995 32.4049 33.707 32.0859C32.0924 31.2135 31.2852 30.0384 31.2852 28.5605C31.2852 27.7923 31.5 27.1087 31.9297 26.5098C32.3659 25.9043 32.9876 25.4323 33.7949 25.0938C34.6087 24.7552 35.5202 24.5859 36.5293 24.5859C37.5449 24.5859 38.4499 24.7715 39.2441 25.1426C40.0384 25.5072 40.6536 26.0247 41.0898 26.6953C41.5326 27.3659 41.7539 28.1276 41.7539 28.9805H38.8242C38.8242 28.3294 38.6191 27.8249 38.209 27.4668C37.7988 27.1022 37.2227 26.9199 36.4805 26.9199C35.7643 26.9199 35.2077 27.0729 34.8105 27.3789C34.4134 27.6784 34.2148 28.0755 34.2148 28.5703C34.2148 29.0326 34.446 29.4199 34.9082 29.7324C35.377 30.0449 36.0638 30.3379 36.9688 30.6113C38.6354 31.1126 39.8496 31.7344 40.6113 32.4766C41.373 33.2188 41.7539 34.1432 41.7539 35.25C41.7539 36.4805 41.2884 37.4473 40.3574 38.1504C39.4264 38.847 38.1732 39.1953 36.5977 39.1953C35.5039 39.1953 34.5078 38.9967 33.6094 38.5996C32.7109 38.196 32.0241 37.6458 31.5488 36.9492C31.0801 36.2526 30.8457 35.4453 30.8457 34.5273H33.7852C33.7852 36.0964 34.7227 36.8809 36.5977 36.8809C37.2943 36.8809 37.8379 36.7409 38.2285 36.4609C38.6191 36.1745 38.8145 35.7773 38.8145 35.2695Z" fill="black"/>
-                                </svg>
-                        </a>
-                    </li>
-                    <li>Two</li>
-                    <li>Three</li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-
-    <nav class="navbar navbar-default navbar-fixed-top">
+    
+    <!-- navbar --> 
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse"
@@ -70,9 +132,8 @@
                         <path d="M1002.1 41.6L1009.5 64.6L1016.8 41.6H1027.3V74.6H1019.3V66.9L1020.1 51.1L1012.1 74.6H1006.8L998.8 51.1L999.6 66.9V74.6H991.6V41.6H1002.1Z" fill="#CE0E2D"/>
                     </svg>
                 </a>
-            </div>
-    
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            </div>    
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                  
                 
@@ -97,11 +158,37 @@
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="header nav-fixed-top">
+        <div class="wex-logo">
+            <svg width="197" height="68" viewBox="0 0 197 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.24609 41.365V7.83594H19.66V41.365C19.66 47.2232 22.506 49.3141 26.2508 49.3141C29.9394 49.3141 32.8416 47.2232 32.8416 41.365V7.83594H45.2743V41.365C45.2743 47.2232 48.1952 49.3141 51.8651 49.3141C55.6286 49.3141 58.4559 47.2232 58.4559 41.365V7.83594H70.8885V41.365C70.8885 54.8708 63.062 60.8985 52.9323 60.8985C46.8658 60.8985 42.035 58.5063 39.0392 53.9478C36.0434 58.5063 31.2127 60.8985 25.1461 60.8985C15.0727 60.8797 7.24609 54.8708 7.24609 41.365Z" fill="#C8102E"/>
+                <path d="M128.502 38.5209C128.727 37.127 128.839 35.7143 128.82 34.2638C128.764 19.6278 116.893 7.77963 102.364 7.83614C87.8151 7.89265 76.0378 19.835 76.094 34.4522C76.1501 49.0882 88.0211 60.9364 102.551 60.8799C113.28 60.8422 122.492 54.3248 126.573 45.0572L112.194 45.1137C109.628 47.4683 106.239 48.9187 102.513 48.9375C95.9974 48.9564 90.4552 44.624 88.6202 38.6528L128.502 38.5209ZM102.42 19.7974C108.299 19.7785 113.373 23.301 115.657 28.368L89.2381 28.4433C91.485 23.3763 96.5404 19.8162 102.42 19.7974Z" fill="#C8102E"/>
+                <path d="M179.3 7.83594H163.197L151.682 24.8265L140.167 7.83594H124.064L142.021 34.3578L124.064 60.8797H140.167L151.682 43.8891L163.197 60.8797H179.3L161.325 34.3578L179.3 7.83594ZM138.744 58.1296H129.288L145.372 34.3578L129.288 10.5861H138.744L154.828 34.3578L138.744 58.1296Z" fill="#C8102E"/>
+                <path d="M137.283 13.355H134.493L148.705 34.3578L134.493 55.3605H137.283L151.513 34.3578L137.283 13.355Z" fill="#C8102E"/>
+                <path d="M158.161 34.3579V53.4394L151.701 43.8892L158.161 34.3579Z" fill="#9C182F"/>
+                <path d="M185.048 8.98497H183.194V14.052H181.696V8.98497H179.88V7.83594H185.048V8.98497Z" fill="#CE0E2D"/>
+                <path d="M187.632 7.83594L189.018 12.1683L190.384 7.83594H192.35V14.052H190.853V12.6016L191.002 9.62541L189.504 14.052H188.512L187.014 9.62541L187.164 12.6016V14.052H185.666V7.83594H187.632Z" fill="#CE0E2D"/>
+            </svg>
+        </div>
+        <div class="language-en">
+            <a href="#">English</a> 
+        </div>
+        <div class="language-es">
+            <a href="#">Spanish</a>
+        </div>
+       
+        <div class="avatar">
+            <div class="ellipse-2">
+            <div class="initial">AP</div></div>
+        </div>
+    </div>
+
     <!-- ------------------------------------------------------------------------------------ -->
-    <div class="container">
+    <div class="container" style="margin-top: 70px;">
         <div class="row">
             <div class="col-md-12">
                 <h1>Hello World</h1>
