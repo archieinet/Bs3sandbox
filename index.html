@@ -12,10 +12,7 @@
     <link rel="stylesheet" href="/css/mii.css">
     <style>
         /* header */
-        .nav-fixed-top{
-            top: 0;
-            border-width: 0 0 1px;
-        }
+      
         .header {
             position: absolute;
             height: 100px;
@@ -24,7 +21,13 @@
             top: 0px;
             background: #F5F5F5;
         }
-
+        .navbar-fixed-top {
+            position: fixed;
+            right: 0;
+            left: 0;
+            border-width: 0 0 1px;
+            z-index: 1030;
+        }
         .wex-logo {
             position: absolute;
             width: 196.79px;
@@ -77,7 +80,7 @@
             width: 154px;
             height: 23px;
             right: 150px;
-            top: calc(50% - 23px/2 + 4.34px);
+            top: calc(50% - 23px/2 + -1.66px);
     
             font-family: 'inter';
             font-style: normal;
@@ -94,7 +97,7 @@
             width: 154px;
             height: 23px;
             right: 60px;
-            top: calc(50% - 23px/2 + 4.34px);
+            top: calc(50% - 23px/2 + -1.66px);
     
             font-family: 'inter';
             font-style: normal;
@@ -105,6 +108,17 @@
             align-items: center;
             font-feature-settings: 'tnum' on, 'lnum' on;
             color: #020D24;
+        } 
+
+        .navbar-right .dropdown-menu {
+                right: 72px;
+                top: 90px;
+            }
+        @media (min-width: 300px){
+            .navbar-right .dropdown-menu {
+                right: 72px;
+                top: 90px;
+            }
         }
     </style>
 </head>
@@ -162,7 +176,7 @@
         </div>
     </nav> -->
 
-    <div class="header nav-fixed-top">
+    <div class="header navbar-fixed-top">
         <div class="wex-logo">
             <svg width="197" height="68" viewBox="0 0 197 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.24609 41.365V7.83594H19.66V41.365C19.66 47.2232 22.506 49.3141 26.2508 49.3141C29.9394 49.3141 32.8416 47.2232 32.8416 41.365V7.83594H45.2743V41.365C45.2743 47.2232 48.1952 49.3141 51.8651 49.3141C55.6286 49.3141 58.4559 47.2232 58.4559 41.365V7.83594H70.8885V41.365C70.8885 54.8708 63.062 60.8985 52.9323 60.8985C46.8658 60.8985 42.035 58.5063 39.0392 53.9478C36.0434 58.5063 31.2127 60.8985 25.1461 60.8985C15.0727 60.8797 7.24609 54.8708 7.24609 41.365Z" fill="#C8102E"/>
@@ -180,11 +194,23 @@
         <div class="language-es">
             <a href="#">Spanish</a>
         </div>
-       
-        <div class="avatar">
-            <div class="ellipse-2">
-            <div class="initial">AP</div></div>
+        <div class="nav navbar-nav navbar-right">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <div class="avatar">
+                    <div class="ellipse-2">
+                        <div class="initial">AP</div></div>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#"><b>Archariya Pliansaneh</b></a></li>
+                    <li><a href="#"><span class="mute">WEX Inc.,</span></a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
         </div>
+        
     </div>
 
     <!-- ------------------------------------------------------------------------------------ -->
