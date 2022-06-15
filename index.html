@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="/css/mii.css">
     <style>
         /* header */
-      
+        body {
+            background-color: #689ba5;
+        }
         .header {
             position: absolute;
             height: 100px;
@@ -33,9 +35,14 @@
             width: 196.79px;
             height: 68px;
             left: 48px;
-            top: 16px;
+            top: 35px;
         }
-    
+
+        .logo {
+            max-width: 100%;
+            max-height: 40px;
+        }
+
         .avatar {
             position: absolute;
             width: 64px;
@@ -58,21 +65,22 @@
     
         .initial {
             position: absolute;
-            width: 25px;
-            height: 25.47px;
-            left: calc(50% - 25px/2 - 0.5px);
-            top: calc(50% - 25.47px/2 - 0.27px);
-    
+            width: 100px;
+            height: 100px;
+            left: 51%;
+            top: 51%;
             font-family: 'inter';
             font-style: normal;
             font-weight: 700;
             font-size: 20px;
             line-height: 23px;
-            display: flex;
+            display: block;
             align-items: center;
             font-feature-settings: 'tnum' on, 'lnum' on;
-    
-            color: #000000;
+            color: #020D24;
+            margin: -51px;
+            text-align: center;
+            line-height: 100px;
         }
     
         .language-en a{
@@ -110,10 +118,22 @@
             color: #020D24;
         } 
 
+        .languages {
+            position: absolute;
+            width: 154px;
+            font-family: 'inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            align-items: center;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: #020D24;
+        }
+
         .navbar-right .dropdown-menu {
                 right: 72px;
                 top: 90px;
-            }
+        }
         @media (min-width: 300px){
             .navbar-right .dropdown-menu {
                 right: 72px;
@@ -125,74 +145,13 @@
 <body>
     
     <!-- navbar --> 
-    <!-- <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="padding: 30px 0 30px 15px;">
-                    <svg width="100" height="50" style="margin-top: -15px;" viewBox="0 0 1051 361" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M38.7 219.6V41.6H105V219.6C105 250.7 120.2 261.8 140.2 261.8C159.9 261.8 175.4 250.7 175.4 219.6V41.6H241.8V219.6C241.8 250.7 257.4 261.8 277 261.8C297.1 261.8 312.2 250.7 312.2 219.6V41.6H378.6V219.6C378.6 291.3 336.8 323.3 282.7 323.3C250.3 323.3 224.5 310.6 208.5 286.4C192.5 310.6 166.7 323.3 134.3 323.3C80.5 323.2 38.7 291.3 38.7 219.6Z" fill="#C8102E"/>
-                        <path d="M686.3 204.5C687.5 197.1 688.1 189.6 688 181.9C687.7 104.2 624.3 41.3 546.7 41.6C469 41.9 406.1 105.3 406.4 182.9C406.7 260.6 470.1 323.5 547.7 323.2C605 323 654.2 288.4 676 239.2L599.2 239.5C585.5 252 567.4 259.7 547.5 259.8C512.7 259.9 483.1 236.9 473.3 205.2L686.3 204.5ZM547 105.1C578.4 105 605.5 123.7 617.7 150.6L476.6 151C488.6 124.1 515.6 105.2 547 105.1Z" fill="#C8102E"/>
-                        <path d="M957.6 41.6H871.6L810.1 131.8L748.6 41.6H662.6L758.5 182.4L662.6 323.2H748.6L810.1 233L871.6 323.2H957.6L861.6 182.4L957.6 41.6ZM741 308.6H690.5L776.4 182.4L690.5 56.2H741L826.9 182.4L741 308.6Z" fill="#C8102E"/>
-                        <path d="M733.2 70.9H718.3L794.2 182.4L718.3 293.9H733.2L809.2 182.4L733.2 70.9Z" fill="#C8102E"/>
-                        <path d="M844.7 182.4V283.7L810.2 233L844.7 182.4Z" fill="#9C182F"/>
-                        <path d="M988.3 47.7H978.4V74.6H970.4V47.7H960.7V41.6H988.3V47.7Z" fill="#CE0E2D"/>
-                        <path d="M1002.1 41.6L1009.5 64.6L1016.8 41.6H1027.3V74.6H1019.3V66.9L1020.1 51.1L1012.1 74.6H1006.8L998.8 51.1L999.6 66.9V74.6H991.6V41.6H1002.1Z" fill="#CE0E2D"/>
-                    </svg>
-                </a>
-            </div>    
-            
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                 
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" style="padding: 30px 0;">
-                            <b>English</b>&nbsp;Spanish
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <div class="circle">
-                                <div class="inner">AP</div>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><b>Archariya Pliansaneh</b></a></li>
-                            <li><a href="#"><span class="mute">WEX Inc.,</span></a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
 
     <div class="header navbar-fixed-top">
         <div class="wex-logo">
-            <svg width="197" height="68" viewBox="0 0 197 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.24609 41.365V7.83594H19.66V41.365C19.66 47.2232 22.506 49.3141 26.2508 49.3141C29.9394 49.3141 32.8416 47.2232 32.8416 41.365V7.83594H45.2743V41.365C45.2743 47.2232 48.1952 49.3141 51.8651 49.3141C55.6286 49.3141 58.4559 47.2232 58.4559 41.365V7.83594H70.8885V41.365C70.8885 54.8708 63.062 60.8985 52.9323 60.8985C46.8658 60.8985 42.035 58.5063 39.0392 53.9478C36.0434 58.5063 31.2127 60.8985 25.1461 60.8985C15.0727 60.8797 7.24609 54.8708 7.24609 41.365Z" fill="#C8102E"/>
-                <path d="M128.502 38.5209C128.727 37.127 128.839 35.7143 128.82 34.2638C128.764 19.6278 116.893 7.77963 102.364 7.83614C87.8151 7.89265 76.0378 19.835 76.094 34.4522C76.1501 49.0882 88.0211 60.9364 102.551 60.8799C113.28 60.8422 122.492 54.3248 126.573 45.0572L112.194 45.1137C109.628 47.4683 106.239 48.9187 102.513 48.9375C95.9974 48.9564 90.4552 44.624 88.6202 38.6528L128.502 38.5209ZM102.42 19.7974C108.299 19.7785 113.373 23.301 115.657 28.368L89.2381 28.4433C91.485 23.3763 96.5404 19.8162 102.42 19.7974Z" fill="#C8102E"/>
-                <path d="M179.3 7.83594H163.197L151.682 24.8265L140.167 7.83594H124.064L142.021 34.3578L124.064 60.8797H140.167L151.682 43.8891L163.197 60.8797H179.3L161.325 34.3578L179.3 7.83594ZM138.744 58.1296H129.288L145.372 34.3578L129.288 10.5861H138.744L154.828 34.3578L138.744 58.1296Z" fill="#C8102E"/>
-                <path d="M137.283 13.355H134.493L148.705 34.3578L134.493 55.3605H137.283L151.513 34.3578L137.283 13.355Z" fill="#C8102E"/>
-                <path d="M158.161 34.3579V53.4394L151.701 43.8892L158.161 34.3579Z" fill="#9C182F"/>
-                <path d="M185.048 8.98497H183.194V14.052H181.696V8.98497H179.88V7.83594H185.048V8.98497Z" fill="#CE0E2D"/>
-                <path d="M187.632 7.83594L189.018 12.1683L190.384 7.83594H192.35V14.052H190.853V12.6016L191.002 9.62541L189.504 14.052H188.512L187.014 9.62541L187.164 12.6016V14.052H185.666V7.83594H187.632Z" fill="#CE0E2D"/>
-            </svg>
+            <img src="https://qa-enroll.benefitsconnect.net/blankauploads/img/companylogos/381a3d50-aee5-46b2-a059-42efcb2a7941.gif"  alt="company logo" class="logo pull-left">
         </div>
-        <div class="language-en">
-            <a href="#">English</a> 
-        </div>
-        <div class="language-es">
-            <a href="#">Spanish</a>
+        <div class="languages">
+            <span class="language-en">English</span>&nbsp;•&nbsp;<span class="language-es">Español</span>
         </div>
         <div class="nav navbar-nav navbar-right">
 
@@ -212,9 +171,13 @@
         </div>
         
     </div>
-
+    <!-- banner -->
+    <div class="container-fluid" style="background-color: yellow ;margin-top: 100px;">
+        <h1>Test</h1>
+        <p>jdsfjkdslajfdsjaklfjdsfsda</p>
+    </div>
     <!-- ------------------------------------------------------------------------------------ -->
-    <div class="container" style="margin-top: 70px;">
+    <div class="container-fluid" style="margin-top: 70px;background-color: teal;">
         <div class="row">
             <div class="col-md-12">
                 <h1>Hello World</h1>
