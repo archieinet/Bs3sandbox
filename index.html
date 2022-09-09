@@ -7,105 +7,16 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Bootstraps 3 Sandbox</title>
     <!-- bs -->
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-select.css">
     <link rel="stylesheet" href="/css/mii.css">
-    <style>
-        /* header */
-        body {
-            background-color: #689ba5;
-        }
-        .header {
-            position: absolute;
-            height: 100px;
-            left: 0px;
-            right: 0px;
-            top: 0px;
-            background: #6ca3e6;
-        }
-        .navbar-fixed-top {
-            position: fixed;
-            right: 0;
-            left: 0;
-            border-width: 0 0 1px;
-            z-index: 1030;
-        }
-        .wex-logo {
-            position: absolute;
-            width: 196.79px;
-            height: 68px;
-            left: 48px;
-            top: 35px;
-        }
-
-        .logo {
-            max-width: 100%;
-            max-height: 40px;
-        }
-
-        .avatar {
-            position: absolute;
-            width: 64px;
-            height: 64px;
-            right: 48px;
-            top: 23.84px;
-        }
-
-        .ellipse-2{
-            box-sizing: border-box;
-            position: absolute;
-            width: 64px;
-            height: 64px;
-            left: 0px;
-            top: 0px;
-            background: #FFFFFF;
-            border: 5px solid #C8102E;
-            border-radius: 50%;
-        }
     
-        .initial {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            left: 51%;
-            top: 51%;
-            font-family: 'inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 23px;
-            display: block;
-            align-items: center;
-            font-feature-settings: 'tnum' on, 'lnum' on;
-            color: #020D24;
-            margin: -51px;
-            text-align: center;
-            line-height: 100px;
-        }
-   
-        .languages {
-            position: absolute;
-            width: 154px;
-            top: 40.84px;
-            right:152px;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            align-items: center;
-            font-feature-settings: 'tnum' on, 'lnum' on;
-            color: #020D24;
-        }
-
-        .navbar-right .dropdown-menu {
-                right: 72px;
-                top: 90px;
-        }
-        @media (min-width: 300px){
-            .navbar-right .dropdown-menu {
-                right: 72px;
-                top: 90px;
-            }
-        }
+    <style>
+       .fa{
+        font-size: 24px;
+       }
     </style>
 </head>
 <body>
@@ -119,22 +30,7 @@
         <div class="languages">
             <span class="language-en">English</span>&nbsp;•&nbsp;<span class="language-es">Español</span>
         </div>
-        <div class="nav navbar-nav navbar-right">
-
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <div class="avatar">
-                    <div class="ellipse-2">
-                        <div class="initial">AP</div></div>
-                    </div>
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><b>Archariya Pliansaneh</b></a></li>
-                    <li><a href="#"><span class="mute">WEX Inc.,</span></a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-        </div>
+       
         
     </div>
     <!-- banner -->
@@ -172,6 +68,24 @@
                 </p>
             </div>
         </div>
+
+        <!-- bs select -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>
+                    font awesome <i class="fa fa-heart"></i> test
+                </h1>
+                <p> this is so stupid 
+                    <i class="fab fa-accessible-icon"></i>
+                </p>
+                <select class="selectpicker">
+                    <option data-icon="fa fa-heart" ></option>
+                    <option style="background: #5cb85c; color: #fff;">Relish</option>
+                  </select>
+                              
+                                  
+            </div>
+        </div>
     </div>
 
 
@@ -191,6 +105,7 @@
     <!-- js -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-select.min.js"></script>
 
 </body>
 </html>
